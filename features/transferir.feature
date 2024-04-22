@@ -18,7 +18,7 @@ Escenario: Número celular no válido
 
 Escenario: Número no registrado para transferencias interbancarias
     Dado número receptor '091 123 123'
-	    Y '091 123 123' no está en registro de transferencias interbancarias
+	    Pero '091 123 123' no está en registro de transferencias interbancarias
     Cuando pido transferir
     Entonces se informa 'número no registrado para transferencias interbancarias'
 	    Y se cancela transferencia

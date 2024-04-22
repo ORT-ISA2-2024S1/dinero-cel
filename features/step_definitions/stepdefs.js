@@ -6,13 +6,17 @@ function transferir(numeroCelular) {
     return 'cancelada';
 }
 
+function estaEnRegistroTIB(numeroCelular) {
+    // TODO implementacion temporal
+    return false;
+}
+
 Given('número receptor {string}', function (numeroCelular) {
     this.numeroReceptor = numeroCelular;
 });
 
-Given('{string} no está en registro de transferencias interbancarias', function (string) {
-    // TODO
-    return 'pending';
+Given('{string} no está en registro de transferencias interbancarias', function (numeroCelular) {
+    return estaEnRegistroTIB(numeroCelular);
 });
 
 When('pido transferir', function () {
